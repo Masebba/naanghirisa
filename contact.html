@@ -9,6 +9,7 @@
   <title>Contact Naanghirisa</title>
 </head>
 
+
 <style>
 /* General Styles */
 html{
@@ -337,15 +338,16 @@ input:required, textarea:required {
     position: absolute;
     top: 0;
     left: 0;
-    background: #f2f2f2;
-    background-image: linear-gradient(to bottom right, #193eb3, #1386d7);
+    background: #4d0da1;
+    background-image: linear-gradient(to bottom right, #f2f2f2, #f2e2e4);
     width: 50%;
     height: 100%;
     border-right: #ccc 1px solid;
     opacity: 0.9;
     padding: 30px;
     transform: translateX(-500px);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
+    z-index: 1;
   }
 
   .main-nav ul.main-menu li {
@@ -397,7 +399,11 @@ input:required, textarea:required {
   }
 }
 
+
+
 </style>
+
+
 </head>
 
 <body>
@@ -409,24 +415,24 @@ input:required, textarea:required {
   <!-- Navigation menu -->
   <div class="navigation-menu">
     <nav class="main-nav">
-      <img src="https://i.imgur.com/hB1g5ZK.png" alt="Naanghirisa" width="160" height="50">
+      <a href="index.html"><img src="https://i.imgur.com/hB1g5ZK.png" alt="Naanghirisa" width="160" height="50"></a>
 
       <ul class="main-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Programs</a></li>
-        <li><a href="#">Impact</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">Programs</a></li>
+        <li><a href="donation.html">Impact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
       <ul class="right-menu">
         <li>
-          <a href="#">
+          <a href="index.html">
             <i><img src="https://img.icons8.com/?size=48&id=TQPOC8XaUqZ0&format=png" alt="Search" class="alt-menu" width="25" height="25"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="donation.html">
             <i><img src="https://img.icons8.com/?size=24&id=ghipC2vtrryx&format=png" alt="Donate" class="alt-menu" width="25" height="25"></i>
           </a>
         </li>
@@ -435,48 +441,48 @@ input:required, textarea:required {
 
     
 <div id="contact-form">
-	<div>
-		<h1>Nice to Meet You!</h1> 
-		<h4>Have a question or want to get in touch? Let's chat.</h4> 
-	</div>
-		<p id="failure">Oopsie...message not sent.</p>  
-		<p id="success">Your message was sent successfully. Thank you!</p>
+  <div>
+    <h1>Nice to Meet You!</h1> 
+    <h4>Have a question or want to get in touch? Let's chat.</h4> 
+  </div>
+    <p id="failure">Oopsie...message not sent.</p>  
+    <p id="success">Your message was sent successfully. Thank you!</p>
 
-		   <form method="post" action="/">
-			<div>
-		      <label for="name">
-		      	<span class="required">Name: *</span> 
-		      	<input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
-		      </label> 
-			</div>
-			<div>
-		      <label for="email">
-		      	<span class="required">Email: *</span>
-		      	<input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
-		      </label>  
-			</div>
-			<div>		          
-		      <label for="subject">
-		      <span>Subject: </span>
-			      <select id="subject" name="subject" tabindex="4">   
-			         <option value="hello">About Naanghirisa</option>
-			         <option value="quote">About the Scholarship</option>  
-			         <option value="general">Something else</option>
-			      </select>
-		      </label>
-			</div>
-			<div>		          
-		      <label for="message">
-		      	<span class="required">Message: *</span> 
-		      	<textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
-		      </label>  
-			</div>
-			<div>		           
-		      <button name="submit" type="submit" id="submit" >SEND</button> 
-			</div>
-		   </form>
+       <form method="post" action="/">
+      <div>
+          <label for="name">
+            <span class="required">Name: *</span> 
+            <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+          </label> 
+      </div>
+      <div>
+          <label for="email">
+            <span class="required">Email: *</span>
+            <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
+          </label>  
+      </div>
+      <div>             
+          <label for="subject">
+          <span>Subject: </span>
+            <select id="subject" name="subject" tabindex="4">   
+               <option value="hello">About Naanghirisa</option>
+               <option value="quote">About the Scholarship</option>  
+               <option value="general">Something else</option>
+            </select>
+          </label>
+      </div>
+      <div>             
+          <label for="message">
+            <span class="required">Message: *</span> 
+            <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
+          </label>  
+      </div>
+      <div>              
+          <button name="submit" type="submit" id="submit" >SEND</button> 
+      </div>
+       </form>
 
-	</div>
+  </div>
     
     
     
@@ -550,6 +556,7 @@ input:required, textarea:required {
     </footer>
 
     <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
 
     </script>
 </body>
